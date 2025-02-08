@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado APP </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Lista de Compras APP
+            </h1>
+            <button class="add-button" id="addButton">
+                <i class="fas fa-plus"></i>
+            </button>
+            <div id="totalDisplay" class="total-display">Total: $0.00</div> <!-- Novo elemento para o total -->
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="form-container" id="formContainer">
+            <form id="itemForm">
+                <div class="input-group">
+                    <input type="text" id="itemName" placeholder="Item name" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="itemQuantity" placeholder="Quantity" step="0.01" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="itemPrice" placeholder="Unit Price" step="0.01" required>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-check"></i>
+                        <span id="submitButtonText">Add Item</span>
+                    </button>
+                    <button type="button" class="cancel-button" id="cancelButton">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="items-container" id="itemsList"></div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
